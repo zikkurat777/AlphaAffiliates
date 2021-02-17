@@ -1,0 +1,258 @@
+/*
+.home__brandscont--gb{
+	width: 260px;
+	position: absolute;
+	top:70px;
+
+}
+.home__brandscont--loki{
+	width: 220px;
+	position: absolute;
+	top:220px;
+	left: 40px;
+}
+.home__brandscont--mp{
+	width: 200px;
+	position: absolute;
+	top:325px;
+	left: 300px;
+}
+.home__brandscont--savarona{
+	width: 270px;
+	position: absolute;
+	top:470px;
+	left: 250px;
+}
+.home__brandscont--roku{
+	width: 230px;
+	position: absolute;
+	left: 250px;
+	top:10px;
+}
+.home__brandscont--cf{
+	width: 275px;
+	position: absolute;
+	left: 10px;
+	top:400px;
+}
+.home__brandscont--gs{
+	width: 220px;
+	position: absolute;
+	left: 290px;
+	top:100px;
+}
+.home__brandscont--eu{
+	width: 240px;
+	position: absolute;
+	left: 100px;
+	top:170px;
+}
+.home__brandscont--webby{
+	width: 235px;
+	position: absolute;
+	left: 340px;
+	top:270px;
+}
+*/
+
+*,*:before,*:after{
+	box-sizing:border-box;
+}
+
+body{
+	margin:0;
+	padding: 0;
+	font-size:16px;
+	background-color:#ffffff;
+	-webkit-font-smoothing:antialiased;
+}
+
+.home{
+min-height: 100vh;
+width: 100%;
+max-width: 1600px;
+background: url(../img/brands/home_bg-new.png) bottom right 100px no-repeat #000;
+background-size: contain;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.home__brandscont{
+	position: relative;
+	width: 540px;
+    height: 600px;
+    perspective: 1000px;
+	transform-style: preserve-3d;
+	margin-top: 200px;
+}
+.home__brandscont:hover .home__brandscont--wave,.home__brandscont:hover .home__brandscont--wavedark,.home__brandscont:hover .home__brandscont--kanga{
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+}
+.home__brandscont--animboard{
+	width: 100%;
+	height: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.home__brandscont--animboard img{
+	border-radius: 6px;
+    pointer-events: none;
+    transition: all .6s;
+}
+
+/* Brands settings */
+
+.home__brandscont--gb{
+	width: 260px;
+	position: absolute;
+	top:-30px;
+	left: 50px;
+	transform: translateZ(45px);
+
+}
+.home__brandscont--loki{
+	width: 220px;
+	position: absolute;
+	top:50px;
+	left: 40px;
+	transform: translateZ(5px);
+}
+.home__brandscont--mp{
+	width: 170px;
+	position: absolute;
+	top:240px;
+	left: 300px;
+	transform: translateZ(33px);
+}
+.home__brandscont--savarona{
+	width: 270px;
+	position: absolute;
+	top:170px;
+	left: 250px;
+	transform: translateZ(50px);
+}
+.home__brandscont--roku{
+	width: 230px;
+	position: absolute;
+	left: 330px;
+	top:-40px;
+	transform: translateZ(25px);
+}
+.home__brandscont--cf{
+	width: 275px;
+	position: absolute;
+	left: 10px;
+	top:300px;
+	transform: translateZ(48px);
+}
+.home__brandscont--gs{
+	width: 220px;
+	position: absolute;
+	left: 290px;
+	top:-10px;
+	transform: translateZ(11px);
+}
+.home__brandscont--eu{
+	width: 240px;
+	position: absolute;
+	left: 20px;
+	top: 210px;
+	transform: translateZ(22px);
+}
+.home__brandscont--webby{
+	width: 235px;
+	position: absolute;
+	left: 240px;
+	top:370px;
+	transform: translateZ(65px);
+}
+
+/* Brands settings  end*/
+
+.home__brandscont--wave{
+	opacity: 0;
+	position: absolute;
+	left: 100px;
+	top: 270px;
+	width: 300px;
+	height: 29px;
+	background: url(../img/wave3.png);
+	animation: waving 5s infinite;
+	animation-timing-function: linear;
+	transform-style: preserve-3d;
+	pointer-events: none;
+	transform: translateZ(77px) scale(1, 1);
+	backface-visibility: hidden;
+}
+.home__brandscont--wavedark{
+	opacity: 0;
+	position: absolute;
+	left: 100px;
+	top: 270px;
+	width: 300px;
+	height: 29px;
+	background: url(../img/wavedark2.png);
+	animation: waving 3s infinite;
+	animation-timing-function: linear;
+	transform-style: preserve-3d;
+	pointer-events: none;
+	transform: translateZ(76px) scale(1, 1);
+	backface-visibility: hidden;
+}
+@keyframes waving {
+  from {
+	  background-position: top 0 left 0 
+}
+  to {
+	  background-position: top 0 left 300px 
+	}
+}
+.home__brandscont--kanga{
+	opacity: 0;
+	position: absolute;
+	left: 100px;
+	top: -5px;
+	width: 300px;
+	height: 271px;
+	background: url(../img/kanga2.png);
+	background-repeat: repeat-x ;
+	animation: kangajump 4s infinite;
+	animation-timing-function: linear;
+	transform-style: preserve-3d;
+	pointer-events: none;
+	transform: translateZ(75px) scale(1, 1);
+	backface-visibility: hidden;
+}
+@keyframes kangajump {
+	  0%   {background-position: top 0 left 0;
+			transform:  translateZ(75px) rotate(0);
+	  }
+	  50%  {background-position: top 55px left 300px;
+			transform:  translateZ(50px) rotate(-6deg);
+	}
+	  75% {background-position: top 20px left 450px;
+			transform:  translateZ(50px) rotate(5deg);
+	  }
+	  100% {background-position: top 0 left 600px;
+		transform:  translateZ(75px) rotate(0);
+  }
+  }
+/* Big tablets, fablets */
+@media screen and (max-width: 961px) {
+}
+
+@media screen and (max-width: 830px) {
+}
+
+
+/* Mid tablets, fablets */
+@media screen and (max-width: 767px) {
+}
+
+	/* Smartphones */
+@media screen and (max-width: 479px) {
+}
